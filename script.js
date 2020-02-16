@@ -1,4 +1,9 @@
-const a = 5, b = 6, c = 7;
-let perimetru = (a + b +c)/2;
-let aria = Math.sqrt(perimetru * (perimetru - a) * (perimetru - b) * (perimetru - c));
-console.log(aria);
+let string = "w3resource"
+let array = string.split('');
+for(let i = 0; i < 10; i++){
+    array.push(array[0])
+    array = array.slice(1, 11);
+    console.log(array)
+}
+
+console.log(array.join(''))
