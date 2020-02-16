@@ -1,6 +1,4 @@
-let time = new Date();
-let date = time.getDate();
-let month = time.getMonth()+1;
-let year = time.getFullYear();
-
-console.log(window.print())
+const a = 5, b = 6, c = 7;
+let perimetru = (a + b +c)/2;
+let aria = Math.sqrt(perimetru * (perimetru - a) * (perimetru - b) * (perimetru - c));
+console.log(aria);
