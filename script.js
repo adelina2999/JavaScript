@@ -1,6 +1,8 @@
-function isLeapYear(year) {
-    return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);  
+let array = [];
+for (let i = 2014; i < 2051; i++) {
+    let time = new Date(i, 0, 1);
+    if( time.getDay() == 0){
+        array.push(time.getFullYear())
+    }
 }
-
-let leapYear = isLeapYear(2020);
-console.log(leapYear);
+console.log(array);
