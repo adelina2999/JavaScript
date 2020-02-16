@@ -1,9 +1,6 @@
-let string = "w3resource"
-let array = string.split('');
-for(let i = 0; i < 10; i++){
-    array.push(array[0])
-    array = array.slice(1, 11);
-    console.log(array)
+function isLeapYear(year) {
+    return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);  
 }
 
-console.log(array.join(''))
+let leapYear = isLeapYear(2020);
+console.log(leapYear);
