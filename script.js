@@ -1,12 +1,17 @@
-let min = 1;
-let max = 10;
-var random = Math.floor(Math.random() * (+max - +min)) + +min;
-console.log("Random number: " + random);
-
-const x = prompt("Introdu un numar intreg intre 1 si 10");
-
-if(x == random){
-    console.log("Good Work");
-} else {
-    console.log("Not matched");
+function countDaysUntilXmas() {
+    let minute = 60 * 1000
+    let hour = minute * 60
+    let day = hour * 24
+    let today = new Date()
+    let nextXmas = new Date()
+    nextXmas.setMonth(11)
+    nextXmas.setDate(25)
+    if (today.getMonth() == 11 && today.getDate() > 25) {
+        nextXmas.setFullYear(nextXmas.getFullYear() + 1)
+    }
+    var diff = nextXmas.getTime() - today.getTime()
+    diff = Math.floor(diff/day)
+    return diff
 }
+let x = ( "You have " + countDaysUntilXmas()  + " days until Christmas." );
+console.log(x);
