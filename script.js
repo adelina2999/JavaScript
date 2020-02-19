@@ -1,1 +1,2 @@
-console.log(window.location)
+filename = "graficCuratenie.docx"
+console.log(filename.split('.').pop());
