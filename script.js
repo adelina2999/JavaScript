@@ -1,4 +1,9 @@
-let var1 = 'ss';
+let a = 11;
+let b = 13;
+let difference = a - b;
 
-this[var1] = 6;
-console.log(this[var1])
+if(a > b){
+    difference = difference * 2;
+} 
+
+console.log(difference);
