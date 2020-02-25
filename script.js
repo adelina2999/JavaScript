@@ -1,9 +1,9 @@
-let a = 11;
-let b = 13;
-let difference = a - b;
+let a = 3;
+let b = 3;
+let sum = a + b;
 
-if(a > b){
-    difference = difference * 2;
-} 
+if(a == b) {
+    sum  = sum * 3;
+}
 
-console.log(difference);
+console.log(sum);
