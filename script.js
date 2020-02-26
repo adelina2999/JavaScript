@@ -1,9 +1,8 @@
-let a = 21;
-let b = 19;
-let difference = Math.abs(a - b);
-
-if(a > b){
-    console.log(difference * 3);
-} else {
-    console.log("a < b")
+function test50(a, b) 
+{
+  return ((a == 50 || b == 50) || (a + b == 50));
 }
+console.log(test50(50, 50))
+console.log(test50(20, 50))
+console.log(test50(20, 20))
+console.log(test50(20, 30))
