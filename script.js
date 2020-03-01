@@ -1,14 +1,15 @@
-function firstFunction(a) {
-  if(a >= 20 && a <= 100){
-    console.log("Este in intervalul 20 - 100");
-  }      
-
-}
-
-function secondFunction(b) {
-  if(b >= 100 && b <= 400){
-    console.log("Este in intervalul 100 ");
+function signOfNumbers(a, b){
+  if(a < 0){
+    console.log("The sign of the first number is minus")
+  } else {
+    console.log("The sign of the first number is plus")
+  }
+  
+  if(b < 0){
+    console.log("The sign of the second number is minus")
+  } else {
+    console.log("The sign of the second number is plus")
   }
 }
-firstFunction(150);
-secondFunction(45);
+
+signOfNumbers(76, -87)
