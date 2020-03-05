@@ -1,8 +1,6 @@
-function remove_character(str, char_pos) 
- {
-  part1 = str.substring(0, char_pos);
-  part2 = str.substring(char_pos + 1, str.length);
-  return part1 + part2;
- }
+function firstAndLast(string) {
+    character = string.substring(1, string.length - 1);
+    return (string.charAt(string.length - 1)) + character + string.charAt(0)
+}
 
-console.log(remove_character("Adelina",5));
+console.log (firstAndLast ('University'));
