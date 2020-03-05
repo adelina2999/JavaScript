@@ -1,6 +1,6 @@
-function firstAndLast(string) {
-    character = string.substring(1, string.length - 1);
-    return (string.charAt(string.length - 1)) + character + string.charAt(0)
+function newString(string) {
+    character = string.substring(0, 1);
+    return character + string + character;
 }
 
-console.log (firstAndLast ('University'));
+console.log (newString('University'));
