@@ -1,6 +1,10 @@
-function test50to99(a, b){
-    return (a >= 50 && a <= 99) && (b >= 50 && b <= 99);
+function test50to99(a, b, c ) {
+    return checkInterval(a) || checkInterval(b) || checkInterval(c);
 }  
-console.log(test50to99(1, 54));
-console.log(test50to99(54, 78));
-console.log(test50to99(1, 101));
+
+function checkInterval(param) {
+    return (param >= 50 && param <= 99)
+}
+console.log(test50to99(1, 54, 101));
+console.log(test50to99(54, 78, 52));
+console.log(test50to99(1, 101, 121));
