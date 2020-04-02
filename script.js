@@ -1,13 +1,10 @@
-function lastDigit(a, b, c) {
-    let aString = a.toString();
-    let bString = b.toString();
-    let cString = c.toString();
-
-    if((aString[aString.length - 1] === bString[bString.length - 1]) && (aString[aString.length - 1] === cString[cString.length - 1]) && (bString[bString.length - 1] === cString[cString.length - 1])) {
-        return true + ' ' + a + ', ' + b + ', ' + c;
+function sumOfTwoIntegers(int1, int2) {
+    if(int1 + int2 >= 50 && int1 + int2 <= 80) {
+        return 65;
     } else {
-        return false
+        return 80;
     }
 }
-console.log(lastDigit(5, 25, 35))
-console.log(lastDigit(4, 7, 56))
+console.log(sumOfTwoIntegers(39,14));
+console.log(sumOfTwoIntegers(1, 2));
+console.log(sumOfTwoIntegers(1, 81));
