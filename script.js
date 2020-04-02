@@ -1,10 +1,25 @@
-const checkRange = (number, param1, param2) => number >= param1 && number <= param2
-const a = 71
-const b = 99
-if(checkRange(a, 40, 60) && checkRange(b, 40, 60)){
-    console.log("Is in range 40-60")
-}else if (checkRange(a, 70, 100) && checkRange(b, 70, 100)){
-    console.log("Is in range 70-100")
-}else {
-    console.log("They are not in the range")
+function numberFrom40to60(a) {
+    if(a >= 40 && a <= 60) {
+        return true
+    }
+    return false
 }
+
+function maxNumber(a, b) {
+  if(numberFrom40to60(a) && numberFrom40to60(b)) {
+      if(a > b) {
+          return "a is max"
+      }else if(b > a) {
+          return "b is max"
+      }else {
+          return "both are equal"
+      }
+  }
+  return "At least one number is not in range"
+}
+
+console.log(maxNumber(44, 45))
+console.log(maxNumber(12, 56))
+console.log(maxNumber(45, 44))
+console.log(maxNumber(12, 11))
+console.log(maxNumber(44, 44))
