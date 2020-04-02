@@ -1,11 +1,13 @@
-function specifiedCharacter(a) {
-    const string = "carantina"
-    if(a == string[2] || a == string[3] || a == string[4]) {
-        return true
-    }
+function lastDigit(a, b, c) {
+    let aString = a.toString();
+    let bString = b.toString();
+    let cString = c.toString();
 
-    return false
+    if((aString[aString.length - 1] === bString[bString.length - 1]) && (aString[aString.length - 1] === cString[cString.length - 1]) && (bString[bString.length - 1] === cString[cString.length - 1])) {
+        return true + ' ' + a + ', ' + b + ', ' + c;
+    } else {
+        return false
+    }
 }
-console.log(specifiedCharacter("a"))
-console.log(specifiedCharacter("1"))
-console.log(specifiedCharacter("b"))
+console.log(lastDigit(5, 25, 35))
+console.log(lastDigit(4, 7, 56))
