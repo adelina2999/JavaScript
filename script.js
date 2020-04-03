@@ -1,12 +1,9 @@
-function threeGivenNumbers (a, b, c) {
-    if (a == b && b == c && a == c) {
-        return 30
-    } else if (a == b || b == c || a == c) {
-        return 40
-    } else {
-        return 20
-    }
+function sameLastDigit (a, b, c) {
+    return (a % 10 === b % 10) ||
+           (a % 10 === c % 10) ||
+           (b % 10 === c % 10)
 }
-console.log (threeGivenNumbers (1, 1, 1))
-console.log (threeGivenNumbers (1, 1, 2))
-console.log (threeGivenNumbers (1, 2, 3))
+
+console.log(sameLastDigit (10, 20, 30))
+console.log(sameLastDigit (10, 20, 35))
+console.log(sameLastDigit (11, 22, 33))
