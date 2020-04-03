@@ -1,9 +1,6 @@
-function sameLastDigit (a, b, c) {
-    return (a % 10 === b % 10) ||
-           (a % 10 === c % 10) ||
-           (b % 10 === c % 10)
+function testNumber(x, y) {
+    return (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15);
 }
 
-console.log(sameLastDigit (10, 20, 30))
-console.log(sameLastDigit (10, 20, 35))
-console.log(sameLastDigit (11, 22, 33))
+console.log(testNumber(15, 9));
+console.log(testNumber(7, 9));
