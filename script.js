@@ -1,12 +1,12 @@
-function theValueOfEight(val1, val2) {
-    if((val1 == 8 || val2 == 8) || (val1 == 8 && val2 == 8)) {
-        return "The value is 8"
-    } else if (val1 + val2 == 8 || val1 - val2 == 8 || val2 - val1 == 8){
-        return "The result is 8"
+function threeGivenNumbers (a, b, c) {
+    if (a == b && b == c && a == c) {
+        return 30
+    } else if (a == b || b == c || a == c) {
+        return 40
+    } else {
+        return 20
     }
 }
-console.log(theValueOfEight(1, 8));
-console.log(theValueOfEight(8, 8));
-console.log(theValueOfEight(18, 10));
-console.log(theValueOfEight(10, 18));
-console.log(theValueOfEight(1, 7));
+console.log (threeGivenNumbers (1, 1, 1))
+console.log (threeGivenNumbers (1, 1, 2))
+console.log (threeGivenNumbers (1, 2, 3))
