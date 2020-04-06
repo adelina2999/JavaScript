@@ -1,23 +1,8 @@
 const car = {  
-    brand: 'Ford', 
+    brand: 'Ford',  
     model: 'Fiesta',  
     start: function() {
-        let a = 5
-        return 'Started'  
-    },
-    array: [1, 2, 3],
-    stop: function() {
-        return 'Stoped'
-    },
-    availableColors: {
-        red: 'in stock',
-        blue: 'not in stock'
+        console.log(`Started ${this.brand} ${this.model}`)  
     }
 }
-
 car.start()
-
-console.log(car.brand)
-console.log(car.start())
-console.log(car.stop())
-console.log(car.availableColors.red)
