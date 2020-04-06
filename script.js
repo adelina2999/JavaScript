@@ -1,8 +1,8 @@
 const car = {  
     brand: 'Ford',  
     model: 'Fiesta',  
-    start: function() {
-        console.log(`Started ${this.brand} ${this.model}`)  
+    goTo: function(destination) {
+        console.log(`Going to ${destination}`)  
     }
 }
-car.start()
+car.goTo('Rome')
