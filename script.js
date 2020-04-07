@@ -1,8 +1,14 @@
-const car = {  
-    brand: 'Ford',  
-    model: 'Fiesta',  
-    goTo: function(destination) {
-        console.log(`Going to ${destination}`)  
-    }
+function numberReverse(x) {
+    return (
+        parseFloat(
+            x 
+            .toString()
+            .split('')
+            .reverse()
+            .join('')
+        ) * Math.sign(x)
+        
+    )
 }
-car.goTo('Rome')
+
+console.log(numberReverse(32242))
