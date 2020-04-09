@@ -1,17 +1,21 @@
-function isColor(color) {
-  switch(color) {
-    case 'red':
-      return 'color is red'
-      break;
-    case 'blue':
-      return 'color is blue'
-      break;
-    default:
-      return 'color is NOT red or blue'
-      break;
-  }
+//constructor function
+function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = new Date(dob);
 }
 
-console.log(isColor('blue'))
-console.log(isColor('red'))
-console.log(isColor('green'))
+Person.prototype.getBirthYear = function () {
+  return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+}
+
+//instantiate object
+const person1 = new Person('John', 'Doe', '1980-04-03');
+const person2 = new Person('Mary', 'Smith', '1970-01-01');
+
+console.log(person1)
+console.log(person2.getFullName())
