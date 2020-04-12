@@ -4,18 +4,6 @@ const inventory = [
   {name: 'cherries', quantity: 5}
 ]
 
-function isCherries(fruit) {
-  return fruit.name === 'cherries'
-}
+const result = inventory.find( ({ name })  => name === 'cherries')
 
-function isBananas(fruit) {
-  return fruit.name === 'bananas'
-}
-
-function isApples(fruit) {
-  return fruit.name === 'apples'
-}
-
-console.log(inventory.find(isCherries))
-console.log(inventory.find(isBananas))
-console.log(inventory.find(isApples))
+console.log(result)
