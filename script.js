@@ -1,30 +1,48 @@
-let a   = 10
-let b   = 3
-let c   = 15
-const d = '5'
-let e   = 'my name'
-const f = 'is Adelina'
+const original = 'adelina'
+const clone    = 'ADELINA'
 
-console.groupCollapsed('Addition')
-  console.log(a + b)
-  console.log(a + d)
-  console.log(e + ' ' + f)
-  console.log(e += ' is batman')
-console.groupEnd();
+console.groupCollapsed('String')  
+  console.log(original == 'adelina')
+  console.log(original == clone)
+  console.log(original == clone.toLowerCase())
+console.groupEnd()
 
-console.groupCollapsed('Multiplication')
-  console.log(a * 3)
-  console.log(a * b)
-  console.log(b * c)
-console.groupEnd();
+const num1 = 10
+const num2 = '10'
 
-a++
-b--
---b
-c += a
+console.groupCollapsed('Numbers')
+  console.log(num1 == num2)
+  console.log(num1 === num2)
+  console.log(num1 != num2)
+  console.log(num1 !== num2)
+console.groupEnd()
 
-console.group('Incrementing')
-  console.log(a)   
-  console.log(b)
-  console.log(c)
+let what
+let thing = null
+
+console.groupCollapsed('Booleans')
+  console.log(Boolean(original))
+  console.log(Boolean(''))
+  console.log(Boolean(what))
+  console.log(Boolean(thing))
+  console.log(Boolean(num2))
+  console.log(Boolean(num1))
+  console.log(Boolean({}))
+console.groupEnd()
+
+const firstArr  = [1, 2, 3]
+const secondArr = [1, 2, 3]
+const firstObj  = { color: 'red'}
+const secondObj = { color: 'red'}
+
+console.groupCollapsed('Objects and Arrays')
+  console.log(firstArr == secondArr)
+  console.log(firstObj == secondObj)
+console.groupEnd()
+
+console.groupCollapsed('AND & OR')
+  console.log(Boolean('blah') && Boolean('thing'))
+  console.log(Boolean('blah') && Boolean(''))
+  console.log(Boolean('blah') || Boolean(''))
+  console.log(Boolean('') || Boolean(''))
 console.groupEnd()
