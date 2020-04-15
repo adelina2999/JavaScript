@@ -4,10 +4,14 @@ const dogs = [
   { name: 'chance', type: 'bernese'}
 ]
 
-for (let i = 0; i < dogs.length; i++) {
+let i = 0
+do {
   const dog         = dogs[i]
   const dogData     = document.createElement('div')
   dogData.classList.add('jumbotron', 'text-center')
   dogData.innerText = `${dog.name} is a ${dog.type}`
   dogsList.appendChild(dogData)
-}
+
+  i++
+} while (i < dogs.length) 
+ 
