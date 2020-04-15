@@ -1,18 +1,19 @@
-function saySomething(message = 'goodbye', whisper = false) {
-  if (whisper) {
-    console.log(`%c${message}`, 'font-size:20px')
-  } else {
-    console.log(message)
+const hero = {
+  name: 'Bruce Wayne',
+  alias: 'Batman',
+  catchprase: 'To the Batcave!',
+  speak: function() {
+    return 'Attention!' + this.catchprase
+  },
+  attack: function(sound) {
+    return `(punches bad guy) ${sound}`
   }
 }
 
-saySomething('hello', true)
-saySomething('my name is adelina', true)
-saySomething()
+const thingToLookFor = 'alias'
 
-function squared(a) {
-  return a * a
-}
+console.log(hero.name)
+console.log(hero[thingToLookFor])
 
-const newSquare = squared(3)
-console.log(newSquare)
+console.log(hero.speak())
+console.log(hero.attack('POWWWWW'))
