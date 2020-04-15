@@ -5,7 +5,7 @@ const dogs = [
 ]
 
 let i = 0
-do {
+while (i < dogs.length) {
   const dog         = dogs[i]
   const dogData     = document.createElement('div')
   dogData.classList.add('jumbotron', 'text-center')
@@ -13,5 +13,4 @@ do {
   dogsList.appendChild(dogData)
 
   i++
-} while (i < dogs.length) 
- 
+} 
