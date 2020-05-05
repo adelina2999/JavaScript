@@ -1,19 +1,8 @@
-function foo() {
-    console.log( this.bar )
+function myFunction() {
+    var str = "Hello World"
+    var enc = window.btoa(str)
+    var dec = window.atob(enc)
+    var res = "Encoded String: " + enc + "<br>" + "Decoded String: " + dec
+
+document.getElementById("demo").innerHTML = res
 }
-
-var bar = 'global'
-
-var obj1 = {
-    bar: 'obj1',
-    foo: foo
-}
-
-var obj2 = {
-    bar: 'obj2'
-}
-
-foo()              //'global'
-obj1.foo()         //'obj1'
-foo.call( obj2 )   //'obj2'
-new foo()          //undefined
