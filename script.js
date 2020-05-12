@@ -1,24 +1,23 @@
 var a = {
-    val: [1, 2, 3],
-
-    //probably correct!
-    toJSON: function() {
-        return this.val.slice(1)
+    valueOf: function() {
+        return '42'
     }
 }
 
 var b = {
-    val: [1, 2, 3], 
-
-    //probably incorrect!
-    toJSON: function() {
-        return '[' +
-        this.val.slice(1).join() +
-        ']'
+    toString: function() {
+        return '42'
     }
 }
-console.log(JSON.stringify(a))
-console.log(JSON.stringify(b))
 
-/*in the second call, we stringified the returned string rather than the array itself
-wich was probably not what we wanted to*/
+var c = [4, 2]
+c.toString = function() {
+    return this.join('')
+}
+
+console.log(Number(a))
+console.log(Number(b))
+console.log(Number(c))
+console.log(Number(''))
+console.log(Number([]))
+console.log(Number(['abc']))
