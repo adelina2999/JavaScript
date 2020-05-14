@@ -1,12 +1,15 @@
-function maxEvenNumber() {
-  let arrayOfNumbers = [1, -9, 0, 5, -4, 22, 23]
-  let maxNumber = arrayOfNumbers[0]
+function maxCharacterNumber() {
+  let arrayOfCharacters = ['Ayesha', 'Margaret', 'Anita', 'Savannah', 'Kira', 'Lilly', 'Gloria', 'Eleanor', 'Jemima']
+  let namesWithMaxNumberOfCharacters = []
+  let maxNumberOfCharacters = arrayOfCharacters[0]
 
-  for(let i = 0; i < arrayOfNumbers.length; i++) {
-    if((arrayOfNumbers[i] > maxNumber) && (arrayOfNumbers[i] % 2 == 0)) {
-      maxNumber = arrayOfNumbers[i]
+  for(let i = 1; i < arrayOfCharacters.length; i++) {
+    if(arrayOfCharacters[i].length >= maxNumberOfCharacters.length) {
+      maxNumberOfCharacters = arrayOfCharacters[i]
+      namesWithMaxNumberOfCharacters.push(arrayOfCharacters[i])
+
     }
   }
-  return maxNumber
+  return namesWithMaxNumberOfCharacters
 }
-console.log(maxEvenNumber())
+console.log(maxCharacterNumber())
