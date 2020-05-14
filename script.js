@@ -1,23 +1,12 @@
-var a = {
-    valueOf: function() {
-        return '42'
+function maxEvenNumber() {
+  let arrayOfNumbers = [1, -9, 0, 5, -4, 22, 23]
+  let maxNumber = arrayOfNumbers[0]
+
+  for(let i = 0; i < arrayOfNumbers.length; i++) {
+    if((arrayOfNumbers[i] > maxNumber) && (arrayOfNumbers[i] % 2 == 0)) {
+      maxNumber = arrayOfNumbers[i]
     }
+  }
+  return maxNumber
 }
-
-var b = {
-    toString: function() {
-        return '42'
-    }
-}
-
-var c = [4, 2]
-c.toString = function() {
-    return this.join('')
-}
-
-console.log(Number(a))
-console.log(Number(b))
-console.log(Number(c))
-console.log(Number(''))
-console.log(Number([]))
-console.log(Number(['abc']))
+console.log(maxEvenNumber())
